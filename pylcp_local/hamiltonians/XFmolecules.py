@@ -581,7 +581,7 @@ def dipoleXandAstates(xbasis, abasis, I=1/2, S=1/2, UX=[],
 
     # Finally, did the user pass to us a rotation matrix for case (b) into the
     # eignebasis:
-    if UX == []:
+    if UX is []: # modified by QW 06/21/2025 to replace == with 'is'
         UX = np.identity(xbasis.shape[0])
 
     # Now transform in Hund's case A basis
