@@ -1,5 +1,5 @@
 import numpy as np
-from pylcp.fields import laserBeams, infinitePlaneWaveBeam, clippedGaussianBeam
+from .fields import laserBeams, infinitePlaneWaveBeam, clippedGaussianBeam
 import numba
 
 @numba.njit
