@@ -560,7 +560,8 @@ class obe(governingeq):
         B = self.magField.Field(r, t)
         Bq = cart2spherical(B)
 
-        H = self.hamiltonian.return_full_H(Bq, Eq)
+        # H = self.hamiltonian.return_full_H(Bq, Eq)
+        H = self.hamiltonian.return_full_H(Eq, Bq) # modified by QW 06/24/2025
         ev_mat = self.__build_coherent_ev_submatrix(H)
 
         if self.transform_into_re_im:
